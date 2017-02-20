@@ -1,0 +1,39 @@
+@CHARSET "EUC-KR";
+
+.div_inputForm {
+	position: relative;
+	background-color: white;
+	width: 800px;
+	height: 500px;
+	padding: 15px;
+	margin: 0 auto;
+}
+
+.div_inputForm > form > table {
+	width: 100%;
+	color: #666;
+	font-size: 13px;
+}
+
+.div_inputForm > form > tbody > table > tr > td {
+	padding: 5px;
+}
+
+.div_inputForm > form > table > tbody > tr > td > label {
+	float: right;
+	margin-right: 10px;
+}
+
+.div_inputForm > form > table > tbody > tr > td > textarea {
+	width: 350px;
+	height: 150px;
+	resize: none;
+}
+
+.div_inputForm > form > table > tbody > tr:FIRST-CHILD > td > input[type="text"] {
+	width: 350px;
+}
+
+.div_inputForm > form > table > tbody > tr > td > input[type="text"], .div_inputForm > form > table > tbody > tr > td > input[type="password"] {
+	width: 100px;
+}

@@ -1,0 +1,48 @@
+@CHARSET "EUC-KR";
+
+.div_whole {
+	position: relative;
+	background-color: white;
+	width: 600px;
+	height: 500px;
+	padding: 15px;
+	margin: 0 auto;
+}
+
+.div_whole > table {
+	width: 100%;
+	color: #666;
+	font-size: 13px;
+}
+
+.div_whole > table > tbody > tr > td {
+	text-align: center;
+	padding: 20px 0px;
+}
+
+.div_whole > table > tbody > tr > td:FIRST-CHILD {
+	text-align: right;
+}
+
+.div_whole > table > tbody > tr:FIRST-CHILD > td:LAST-CHILD {
+	font-weight: bold;
+	font-size: 15px;
+	border-bottom: 1px solid gray;
+}
+
+.div_whole > table > tbody > tr:NTH-CHILD(2) > td:NTH-CHILD(2) , .div_whole > table > tbody > tr:NTH-CHILD(3) > td:NTH-CHILD(2) {
+	float: left;
+	margin-left: 15px;
+}
+
+.div_whole > table > tbody > tr > td > textarea {
+	width: 450px;
+	height: 250px;
+	resize: none;
+}
+
+.div_whole > div {
+	float: right;
+}
+
+

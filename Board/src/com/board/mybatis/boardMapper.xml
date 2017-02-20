@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+<mapper namespace="boardMapper">
+
+	<resultMap type="com.board.beans.Board" id="resultClob">
+		<result property="content" column="content" jdbcType="CLOB" javaType="java.lang.String"/>
+	</resultMap>
+	
+	<select id="getArticleList" resultMap="resultClob">
+		select * from board order by idx desc
+	</select>
+	
+	<insert id="insertArticle" parameterType="com.board.beans.Board">
+		insert into board(idx, title, writer, regdate, count, content, password) values(seq_board_idx.nextval, #{title}, #{writer}, sysdate, 1, #{content:CLOB}, #{password})
+	</insert>
+	
+	<delete id="deleteArticle" parameterType="int">
+		delete from board where idx = #{idx}
+	</delete>
+	
+	<select id="selectArticle" parameterType="int" resultMap="resultClob">
+		select * from board where idx = #{idx}
+	</select>
+	
+	<update id="updateArticle" parameterType="com.board.beans.Board">
+		update board set title = #{title}, writer = #{writer}, content = #{content:CLOB} where idx = #{idx}
+	</update>
+</mapper>

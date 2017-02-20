@@ -1,0 +1,50 @@
+@CHARSET "EUC-KR";
+
+.div_whole {
+	position: relative;
+	background-color: white;
+	width: 800px;
+	height: 500px;
+	padding: 15px;
+	margin: 0 auto;
+}
+
+.div_whole > table {
+	width: 100%;
+	border-bottom: 1px solid #999;
+	color: #666;
+	font-size: 12px;
+}
+
+.div_whole > table > thead > tr {
+	height: 45px;
+}
+
+.div_whole > table > thead > tr > th {
+	border-top: solid 1px #999;
+	border-bottom: solid 1px #b2b2b2;
+	background-color: #f1f1f4;
+	color: #333;
+	font-weight: bold;
+	line-height: 20px;
+}
+
+.div_whole > table > tbody {
+	overflow: auto;
+}
+
+.div_whole > table > tbody > tr {
+	height: 40px;
+}
+
+.div_whole > table > tbody > tr > td {
+	border-bottom: solid 1px #d2d2d2;
+	text-align: center;
+	height: 30px;
+}
+
+.div_whole > table > tbody > tr > td > a.title {
+	float: left;
+	padding-left: 15px; 
+	font-size: 13px;
+}
